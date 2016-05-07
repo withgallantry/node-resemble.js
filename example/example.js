@@ -25,7 +25,6 @@ var fileData2 = fs.readFileSync('People2.png');
 resemble(fileData1).compareTo(fileData2)
   //.ignoreAntialiasing()
   //.ignoreColors()
-  .scaleToSameSize()
   .onComplete(function(data){
     console.log('On scalling to same size:', data);
     data.getDiffImage().pack().pipe(fs.createWriteStream('diffr.png'));

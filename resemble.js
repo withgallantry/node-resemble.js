@@ -470,9 +470,6 @@ _this['resemble'] = function(fileData) {
         function onceWeHaveBoth(img) {
             var width;
             var height;
-    if(scaleToSameSize){
-        console.log('The algo for resizing goes here');
-    }
             images.push(img);
             if (images.length === 2) {
                 width = images[0].width > images[1].width ? images[0].width : images[1].width;
@@ -588,7 +585,8 @@ _this['resemble'] = function(fileData) {
                 updateCallbackArray.push(callback);
 
                 var wrapper = function() {
-                    compare(fileData, secondFileData);
+
+                 compare(fileData, secondFileData);
                 };
 
                 wrapper();
